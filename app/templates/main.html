@@ -1,0 +1,74 @@
+<header>
+    <h1>Horoscope Annuel</h1>
+</header>
+
+<div id="birthdate">
+
+    <p>Pour savoir ce que vous réserve cette année,<br/>
+        merci d'entrer votre date de naissance</p>
+
+    <form (submit)="setDate($event, newdate.value)">
+        <input type="text" placeholder="Votre date de naissance AAAA-MM-JJ" #newdate>
+        <input type="submit" value="VALIDER">
+    </form>
+
+    <li *ng-for="#birthDates of birthDates">
+        <span style="color:white"><p>{{birthDates.date}}</p></span>
+    </li>
+
+</div>
+
+
+<result></result>
+
+<div id="signs">
+    <div id="belier" class="sign">
+        <img [src]="images[2].src" alt="Bélier" />
+    </div>
+
+    <div id="taureau" class="sign">
+        <img [src]="images[10].src" alt="Taureau">
+    </div>
+
+    <div id="gemeaux" class="sign">
+        <img [src]="images[5].src" alt="Gémeaux">
+    </div>
+
+    <div id="cancer" class="sign">
+        <img [src]="images[3].src" alt="Cancer">
+    </div>
+
+    <div id="lion" class="sign">
+        <img [src]="images[6].src" alt="Lion">
+    </div>
+
+    <div id="vierge" class="sign">
+        <img [src]="images[12].src" alt="Vierge">
+    </div>
+
+    <div id="balance" class="sign">
+        <img [src]="images[1].src" alt="Balance">
+    </div>
+
+    <div id="scorpion" class="sign">
+        <img [src]="images[9].src" alt="Scorpion">
+    </div>
+
+    <div id="sagittaire" class="sign">
+        <img [src]="images[8].src" alt="Sagittaire">
+    </div>
+
+    <div id="capricorne" class="sign">
+        <img [src]="images[4].src" alt="Capricorne">
+    </div>
+
+    <div id="verseau" class="sign">
+        <img [src]="images[11].src" alt="Verseau">
+    </div>
+
+    <div id="poisson" class="sign">
+        <img [src]="images[7].src" alt="Poisson">
+    </div>
+
+
+</div>
