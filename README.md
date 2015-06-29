@@ -7,7 +7,7 @@ Based on the angular boilerplate [angular2-seed](https://github.com/mgechev/angu
 # How to start
 
 ```bash
-git clone https://github.com/ClementGendry/HoroscopeAnnuel.git
+git clone https://github.com/ClementGendry/HoroscopeAnnuel2
 cd angular2-base
 npm install
 npm install -g gulp # If you don't have gulp already installed
