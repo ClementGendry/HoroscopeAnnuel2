@@ -1,5 +1,5 @@
 <header>
-    <h1>Horoscope Annuel</h1>
+    <h1 id="title">Horoscope Annuel</h1>
 </header>
 
 <div id="birthdate">
@@ -12,9 +12,15 @@
         <input type="submit" value="VALIDER">
     </form>
 
-    <li *ng-for="#birthDates of birthDates">
-        <span style="color:white"><p>{{birthDates.date}}</p></span>
-    </li>
+    <br/><br/>
+
+    <div id="mysign">
+        <li *ng-for="#mySign of mySign">
+            <span class="signs-infos" style="color:white"><p>{{mySign}}</p></span>
+        </li>
+    </div>
+
+    <br/><br/>
 
 </div>
 

@@ -24,6 +24,7 @@ class Horoscope {
 
     inputService: InputService;
     birthDate: BirthDate;
+    mySign: Array<String>;
 
     imageService: ImageService;
     images: Array<Image>;
@@ -44,8 +45,7 @@ class Horoscope {
     setDate(e, date: String){
         e.preventDefault();
         this.birthDate = this.inputService.setDate(date);
-        console.log(this.birthDate);
-        this.result.testSignes(this.birthDate);
+        this.mySign = this.result.testSignes(this.birthDate);
     }
 
 }
@@ -80,8 +80,7 @@ class Result{
     }
 
     testSignes(birthdate){
-        console.log(birthdate);
-        this.signeService.testSignes(birthdate);
+        return this.signeService.testSignes(birthdate);
     }
 
 
