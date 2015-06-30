@@ -8,7 +8,7 @@
         merci d'entrer votre date de naissance</p>
 
     <form (submit)="setDate($event, newdate.value)">
-        <input type="text" placeholder="Votre date de naissance AAAA-MM-JJ" #newdate>
+        <input type="text" placeholder="Votre jour de naissance et le mois (JJ-MM)" #newdate>
         <input type="submit" value="VALIDER">
     </form>
 
@@ -22,53 +22,88 @@
 <result></result>
 
 <div id="signs">
-    <div id="belier" class="sign">
-        <img [src]="images[2].src" alt="Bélier" />
-    </div>
 
-    <div id="taureau" class="sign">
-        <img [src]="images[10].src" alt="Taureau">
-    </div>
+    <a href="pagesSignes/belier.html">
+        <div id="belier" class="sign">
+            <img [src]="images[2].src" alt="Bélier" />
+        </div>
+    </a>
 
-    <div id="gemeaux" class="sign">
-        <img [src]="images[5].src" alt="Gémeaux">
-    </div>
 
-    <div id="cancer" class="sign">
-        <img [src]="images[3].src" alt="Cancer">
-    </div>
+    <a href="pagesSignes/taureau.html">
+        <div id="taureau" class="sign">
+            <img [src]="images[10].src" alt="Taureau">
+        </div>
+    </a>
 
-    <div id="lion" class="sign">
-        <img [src]="images[6].src" alt="Lion">
-    </div>
 
-    <div id="vierge" class="sign">
-        <img [src]="images[12].src" alt="Vierge">
-    </div>
+    <a href="pagesSignes/gemeaux.html">
+        <div id="gemeaux" class="sign">
+            <img [src]="images[5].src" alt="Gémeaux">
+        </div>
+    </a>
 
-    <div id="balance" class="sign">
-        <img [src]="images[1].src" alt="Balance">
-    </div>
 
-    <div id="scorpion" class="sign">
-        <img [src]="images[9].src" alt="Scorpion">
-    </div>
+    <a href="pagesSignes/cancer.html">
+        <div id="cancer" class="sign">
+            <img [src]="images[3].src" alt="Cancer">
+        </div>
+    </a>
 
-    <div id="sagittaire" class="sign">
-        <img [src]="images[8].src" alt="Sagittaire">
-    </div>
 
-    <div id="capricorne" class="sign">
-        <img [src]="images[4].src" alt="Capricorne">
-    </div>
+    <a href="pagesSignes/lion.html">
+        <div id="lion" class="sign">
+            <img [src]="images[6].src" alt="Lion">
+        </div>
+    </a>
 
-    <div id="verseau" class="sign">
-        <img [src]="images[11].src" alt="Verseau">
-    </div>
+    <a href="pagesSignes/vierge.html">
+        <div id="vierge" class="sign">
+            <img [src]="images[12].src" alt="Vierge">
+        </div>
+    </a>
 
-    <div id="poisson" class="sign">
-        <img [src]="images[7].src" alt="Poisson">
-    </div>
+
+    <a href="pagesSignes/balance.html">
+        <div id="balance" class="sign">
+            <img [src]="images[1].src" alt="Balance">
+        </div>
+    </a>
+
+
+    <a href="pagesSignes/scorpion.html">
+        <div id="scorpion" class="sign">
+            <img [src]="images[9].src" alt="Scorpion">
+        </div>
+    </a>
+
+
+    <a href="pagesSignes/sagittaire.html">
+        <div id="sagittaire" class="sign">
+            <img [src]="images[8].src" alt="Sagittaire">
+        </div>
+    </a>
+
+
+    <a href="pagesSignes/capricorne.html">
+        <div id="capricorne" class="sign">
+            <img [src]="images[4].src" alt="Capricorne">
+        </div>
+    </a>
+
+
+    <a href="pagesSignes/verseau.html">
+        <div id="verseau" class="sign">
+            <img [src]="images[11].src" alt="Verseau">
+        </div>
+    </a>
+
+
+    <a href="pagesSignes/poisson.html">
+        <div id="poisson" class="sign">
+            <img [src]="images[7].src" alt="Poisson">
+        </div>
+    </a>
 
 
 </div>

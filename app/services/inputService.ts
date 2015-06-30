@@ -1,18 +1,19 @@
 //Classe qui check la date de l'input
 export class InputService {
 
-    birthDate:  Date;
+    birthDate:  BirthDate;
 
     constructor(){
     }
 
     // récupère la valeur des inputs
-    getInputDates(){
+    getBirthDate(){
         return this.birthDate;
     }
 
-    setDate(date: Date) {
-        this.birthDate = <Date> new BirthDate(date);
+    setDate(date: String) {
+        this.birthDate = new BirthDate(date);
+        return this.birthDate;
     }
 
 }
@@ -20,9 +21,9 @@ export class InputService {
 //Classe BirthDate
 export class BirthDate {
 
-    date: Date;
+    date: String;
 
-    constructor(date: Date){
+    constructor(date: String){
         this.date = date;
     }
 
