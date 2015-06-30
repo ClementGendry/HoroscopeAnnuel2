@@ -4,7 +4,7 @@
 import {Component, View, bootstrap, NgFor, forwardRef, Parent} from 'angular2/angular2'; /*IMPORT DE FOREACH*/
 import {ImageService, Image} from 'services/imageService';
 import {InputService, BirthDate} from 'services/inputService';
-import {SigneService, Signe} from 'services/signService';
+import {SigneService, Signe} from 'services/signeService';
 
 
 /* --------------- COMPONENT HOROSCOPE --------------- */
@@ -23,7 +23,7 @@ class Horoscope {
     result: Result; /* DEF DU FILS : RESULT */
 
     inputService: InputService;
-    birthDate: Date;
+    birthDate: BirthDate;
 
     imageService: ImageService;
     images: Array<Image>;
@@ -31,15 +31,21 @@ class Horoscope {
     constructor(inputService: InputService, imageService: ImageService){
 
         this.inputService = inputService;
-        this.birthDate = this.inputService.getInputDates();
+        this.birthDate = this.inputService.getBirthDate();
 
         this.imageService = imageService;
         this.images = this.imageService.getImage();
     }
 
-    setDate(e, date: Date){
+    registerResult(result: Result) {
+        this.result = result;
+    }
+
+    setDate(e, date: String){
         e.preventDefault();
-        this.inputService.setDate(date);
+        this.birthDate = this.inputService.setDate(date);
+        console.log(this.birthDate);
+        this.result.testSignes(this.birthDate);
     }
 
 }
@@ -65,12 +71,19 @@ class Result{
 
     constructor(signeService: SigneService, @Parent() horoscope: Horoscope){
 
-        this.horoscope = Horoscope;
+        this.horoscope = horoscope;
+        this.horoscope.registerResult(this);
+
         this.signeService = signeService;
         this.signes = this.signeService.getSignes();
-        this.horoscope.birthDate = this.signeService.testSignes();
 
     }
+
+    testSignes(birthdate){
+        console.log(birthdate);
+        this.signeService.testSignes(birthdate);
+    }
+
 
 }
 
